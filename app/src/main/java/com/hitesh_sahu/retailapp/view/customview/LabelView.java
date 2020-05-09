@@ -13,6 +13,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Typeface;
+import androidx.appcompat.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -23,11 +24,10 @@ import android.view.animation.Transformation;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class LabelView extends TextView {
+public class LabelView extends AppCompatTextView {
 
     private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
     private float _offsetx;

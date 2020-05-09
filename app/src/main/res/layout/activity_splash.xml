@@ -8,6 +8,7 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/pro_txt"
-            android:src="@drawable/app_icon" />
+            app:srcCompat="@drawable/app_icon" />
 
         <com.hitesh_sahu.retailapp.util.FontText xmlns:font="http://schemas.android.com/apk/lib/com.thoughtworks.retailshop.util"
             android:id="@+id/pro_txt"

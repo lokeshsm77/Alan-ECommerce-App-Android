@@ -25,7 +25,6 @@
 package com.hitesh_sahu.retailapp.view.fragment;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -34,6 +33,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
+import androidx.appcompat.app.AlertDialog;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.webkit.WebView;

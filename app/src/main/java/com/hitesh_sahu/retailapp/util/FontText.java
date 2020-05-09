@@ -10,10 +10,10 @@ package com.hitesh_sahu.retailapp.util;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import androidx.appcompat.widget.AppCompatTextView;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
-public class FontText extends TextView {
+public class FontText extends AppCompatTextView {
 
     String TAG = getClass().getName();
     private Context mContext;

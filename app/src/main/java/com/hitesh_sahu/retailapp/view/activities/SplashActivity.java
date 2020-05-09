@@ -12,7 +12,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
@@ -22,7 +22,7 @@ import android.widget.TextView;
 import com.hitesh_sahu.retailapp.R;
 
 
-public class SplashActivity extends FragmentActivity {
+public class SplashActivity extends AppCompatActivity {
 
     private Animation animation;
     private ImageView logo;
@@ -31,6 +31,7 @@ public class SplashActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Theme_AppCompat_Dialog);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
@@ -61,24 +62,24 @@ public class SplashActivity extends FragmentActivity {
     }
 
     private void flyIn() {
-        animation = AnimationUtils.loadAnimation(this, R.anim.logo_animation);
+        animation = AnimationUtils.loadAnimation(getBaseContext(), R.anim.logo_animation);
         logo.startAnimation(animation);
 
-        animation = AnimationUtils.loadAnimation(this, R.anim.app_name_animation);
+        animation = AnimationUtils.loadAnimation(getBaseContext(), R.anim.app_name_animation);
         appTitle.startAnimation(animation);
 
-        animation = AnimationUtils.loadAnimation(this, R.anim.pro_animation);
+        animation = AnimationUtils.loadAnimation(getBaseContext(), R.anim.pro_animation);
         appSlogan.startAnimation(animation);
     }
 
     private void endSplash() {
-        animation = AnimationUtils.loadAnimation(this, R.anim.logo_animation_back);
+        animation = AnimationUtils.loadAnimation(getBaseContext(), R.anim.logo_animation_back);
         logo.startAnimation(animation);
 
-        animation = AnimationUtils.loadAnimation(this, R.anim.app_name_animation_back);
+        animation = AnimationUtils.loadAnimation(getBaseContext(), R.anim.app_name_animation_back);
         appTitle.startAnimation(animation);
 
-        animation = AnimationUtils.loadAnimation(this, R.anim.pro_animation_back);
+        animation = AnimationUtils.loadAnimation(getBaseContext(), R.anim.pro_animation_back);
         appSlogan.startAnimation(animation);
 
         animation.setAnimationListener(new AnimationListener() {

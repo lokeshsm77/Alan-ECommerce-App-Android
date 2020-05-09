@@ -12,11 +12,14 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+
+import com.alan.alansdk.Alan;
+import com.alan.alansdk.button.AlanButton;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -61,6 +64,9 @@ public class ECartHomeActivity extends AppCompatActivity {
     private AVLoadingIndicatorView progressBar;
 
     private NavigationView mNavigationView;
+
+    private AlanButton alanButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -212,6 +218,29 @@ public class ECartHomeActivity extends AppCompatActivity {
                     }
                 });
 
+        configAlanVoice();
+
+    }
+
+    /**
+     * Method configures the alan voice command UI with application, initializes the Alan command
+     * and voice command listener with Alan SDK.
+     */
+    private void configAlanVoice(){
+        if(this.alanButton == null) {
+            alanButton = findViewById(R.id.alan_button);
+            Alan.getInstance().setAlanButton(alanButton);
+            alanButton.setButtonAlign(AlanButton.BUTTON_RIGHT);
+            setAlanVisualState();
+        }
+    }
+
+    /**
+     * Method helps to set the visual state of the application.
+     *
+     */
+    private void setAlanVisualState(){
+        Alan.getInstance().setVisualState("Add Podcast");
     }
 
     public AVLoadingIndicatorView getProgressBar() {

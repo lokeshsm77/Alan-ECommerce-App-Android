@@ -27,9 +27,9 @@
     </style>
 
     <style name="Widget.MyApp.HeaderBar.Spinner" parent="Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
-        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="background">?attr/selectableItemBackground</item>
         <item name="android:dropDownSelector">?attr/selectableItemBackground</item>
-        <item name="android:divider">@null</item>
+        <item name="divider">@null</item>
         <item name="overlapAnchor">true</item>
     </style>
 
@@ -73,7 +73,7 @@
     </style>
 
     <style name="ActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
-        <item name="android:displayOptions">homeAsUp</item>
+        <item name="displayOptions">homeAsUp</item>
     </style>
 
     <style name="TabLayout_Theme" parent="@style/MyTheme">
